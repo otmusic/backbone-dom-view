@@ -2,7 +2,7 @@
 	if (typeof define === 'function' && define.amd) {
 		define(['backbone', 'underscore'], factory);
 	} else {
-		Backbone.DOMView = factory(Backbone, _);
+		BackboneDomView = factory(Backbone, _);
 	}
 }(function (BB, _) {
 
@@ -10,12 +10,12 @@
 
 	var _DEV_ = true; // false in min file
 
-	DOMView.v = '1.61.4';
+	BackboneDomView.v = '1.61.5';
 
 	var View = BB.View,
 		$ = BB.$;
 
-	function DOMView(ops) {
+	function BackboneDomView(ops) {
 		ops = ops || {};
 
 		if (has(ops, 'parent')) {
@@ -41,11 +41,11 @@
 
 		helpers.template.call(this, '', this.template);
 
-		this.trigger(DOMView.readyEvent);
+		this.trigger(BackboneDomView.readyEvent);
 	}
 
-	BB.DOMView = View.extend({
-		constructor: DOMView,
+	BB.BackboneDomView = View.extend({
+		constructor: BackboneDomView,
 
 		ui: {
 			root: ''
@@ -66,7 +66,7 @@
 
 			this.template = mergeExtendedField(this, 'template', true);
 
-			this.trigger(DOMView.elementEvent);
+			this.trigger(BackboneDomView.elementEvent);
 
 			return this;
 		},
@@ -332,10 +332,10 @@
 		}
 	}
 
-	DOMView.readyEvent = 'template-ready';
-	DOMView.elementEvent = 'element-ready';
+	BackboneDomView.readyEvent = 'template-ready';
+	BackboneDomView.elementEvent = 'element-ready';
 
-	var helpers = DOMView.helpers = {
+	var helpers = BackboneDomView.helpers = {
 		template: templateHelper,
 		'class': classHelper,
 		toggleClass: classHelper,
@@ -1182,5 +1182,5 @@
 
 	var has = _.has;
 
-	return DOMView;
+	return BackboneDomView;
 }));
