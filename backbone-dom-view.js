@@ -10,7 +10,7 @@
 
 	var _DEV_ = true; // false in min file
 
-	DOMView.v = '1.61.3';
+	DOMView.v = '1.61.1';
 
 	var View = BB.View,
 		$ = BB.$;
