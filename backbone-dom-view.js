@@ -1182,5 +1182,5 @@
 
 	var has = _.has;
 
-	export default DOMView;
+	return DOMView;
 }));
