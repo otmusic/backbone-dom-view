@@ -1,5 +1,6 @@
 {
   "name": "backbone-dom-view",
+  "version": "1.61.1",
   "dependencies": {
     "gulp": "3.*",
     "gulp-uglifyjs": "0.*"
