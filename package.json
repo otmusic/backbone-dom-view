@@ -1,6 +1,6 @@
 {
   "name": "backbone-dom-view",
-  "version": "1.61.1",
+  "version": "1.61.4",
   "dependencies": {},
   "devDependencies": {
     "uglify-js": "^2.4.17"
